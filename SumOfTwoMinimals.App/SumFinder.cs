@@ -16,21 +16,22 @@ namespace SumOfTwoMinimals.App
             int min1 = array[0];
             int min2 = array[1];
 
-            if (min2 > min1)
+            if (min2 < min1)
             {
                 var buffer = min1;
                 min1 = min2;
                 min2 = buffer;
             }
 
-            foreach (var item in array)
+            for (int i = 2; i < array.Length; i++)
             {
-                if (item < min1)
+                if (array[i] < min1)
                 {
                     min2 = min1;
-                    min1 = item;
-                } else if (item < min2)
-                    min2 = item;
+                    min1 = array[i];
+                }
+                else if (array[i] < min2)
+                    min2 = array[i];
             }
 
             return min1 + min2;
