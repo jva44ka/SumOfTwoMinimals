@@ -39,5 +39,12 @@ namespace SumOfTwoMinimals.Tests
             var result = new SumFinder().GetSumOfTwoMinimals(new int[] { 5, 10, 3, -3, 2, 4 });
             Assert.AreEqual(result, -3 + 2);
         }
+
+        [Test]
+        public void Test3Instead2()
+        {
+            var result = new SumFinder().GetSumOfTwoMinimals(new int[] { 4, 4, 4, 2, 1, 1 });
+            Assert.AreEqual(result, 2);
+        }
     }
 }
